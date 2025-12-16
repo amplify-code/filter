@@ -2,10 +2,11 @@
 
 This package provides a UI library with backend integration for showing and filtering model data on websites. One simple use case would be product catalogues which update when categories are selected, but other examples exist.
 
+Filter was originally developed by Kieran Metcalfe of Ascent Creative until his death in July 2025. This fork is maintained by Colin Cameron of Amplify Code Ltd in order to further develop and maintain websites that rely on this package.
+
 ## Installation
 
  - `composer require ascentcreative\filter` - although the repository location may need to be added to you composer.json file.
- - Please note that currently, the active code is in the dev branch.
 
 ## Core concepts
 
