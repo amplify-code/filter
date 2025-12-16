@@ -524,8 +524,12 @@ var FilterView = {
     // console.log($(this.element).serialize());
 
     // does an AJAX request to get ALL pages of data, not just current.
+    var url = this.baseUri + '/copy';
+    if (col != '') {
+      url = url + '/' + col;
+    }
     $.ajax({
-      url: this.baseUri + '/copy/' + col,
+      url: url,
       // url: this.baseUri + '/copy',
       type: 'post',
       data: filterData,
