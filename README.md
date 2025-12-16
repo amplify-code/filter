@@ -6,7 +6,7 @@ Filter was originally developed by Kieran Metcalfe of Ascent Creative until his 
 
 ## Installation
 
- - `composer require ascentcreative\filter` - although the repository location may need to be added to you composer.json file.
+ - `composer require amplifycode\filter` - although the repository location may need to be added to you composer.json file.
 
 ## Core concepts
 
@@ -14,12 +14,12 @@ This package leans heavily on mapping fields in the UI to scopes defined on a La
 
 ## Writing a FilterManager class
 
-FilterManager classes extend `AscentCreative\Filter\FilterManager`. A very simple example would be:
+FilterManager classes extend `AmplifyCode\Filter\FilterManager`. A very simple example would be:
 
 ```
 namespace App\Filter;
 
-use AscentCreative\Filter\FilterManager;
+use AmplifyCode\Filter\FilterManager;
 use App\Models\Product;
 
 class ProductFilterManager extends FilterManager {
@@ -246,8 +246,8 @@ namespace App\Filter;
 
 use Illuminate\Support\Facades\DB;
 
-use AscentCreative\Filter\DataTableBuilder;
-use AscentCreative\Filter\DataTable\Column;
+use AmplifyCode\Filter\DataTableBuilder;
+use AmplifyCode\Filter\DataTable\Column;
 
 use App\Models\Product;
 

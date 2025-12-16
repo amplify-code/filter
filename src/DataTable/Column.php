@@ -1,5 +1,5 @@
 <?php
-namespace AscentCreative\Filter\DataTable;
+namespace AmplifyCode\Filter\DataTable;
 
 class Column {
 

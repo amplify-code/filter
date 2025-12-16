@@ -1,5 +1,5 @@
 <?php
-namespace AscentCreative\Filter;
+namespace AmplifyCode\Filter;
 
 use Illuminate\Support\Facades\Log;
 

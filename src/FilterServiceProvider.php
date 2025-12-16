@@ -1,6 +1,6 @@
 <?php
 
-namespace AscentCreative\Filter;
+namespace AmplifyCode\Filter;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Blade;
@@ -9,8 +9,8 @@ use \Illuminate\Support\Facades\Route;
 // use \Illuminate\Support\Facades\Router;
 
 
-use AscentCreative\Filter\FilterManager;
-use AscentCreative\Filter\DataTableBuilder;
+use AmplifyCode\Filter\FilterManager;
+use AmplifyCode\Filter\DataTableBuilder;
 
 class FilterServiceProvider extends ServiceProvider
 {
@@ -48,23 +48,23 @@ class FilterServiceProvider extends ServiceProvider
 
   // register the components
   public function bootComponents() {
-        Blade::component('filter-view', 'AscentCreative\Filter\Components\FilterView');
+        Blade::component('filter-view', 'AmplifyCode\Filter\Components\FilterView');
 
-        Blade::component('filter-bar', 'AscentCreative\Filter\Components\FilterBar');
-        Blade::component('filter-field', 'AscentCreative\Filter\Components\FilterField');
-        Blade::component('filter-dropdown', 'AscentCreative\Filter\Components\FilterDropdown');
-        Blade::component('filter-tags', 'AscentCreative\Filter\Components\FilterTags');
-        Blade::component('filter-checkbox', 'AscentCreative\Filter\Components\FilterCheckbox');
-        Blade::component('filter-sorter', 'AscentCreative\Filter\Components\FilterSorter');
+        Blade::component('filter-bar', 'AmplifyCode\Filter\Components\FilterBar');
+        Blade::component('filter-field', 'AmplifyCode\Filter\Components\FilterField');
+        Blade::component('filter-dropdown', 'AmplifyCode\Filter\Components\FilterDropdown');
+        Blade::component('filter-tags', 'AmplifyCode\Filter\Components\FilterTags');
+        Blade::component('filter-checkbox', 'AmplifyCode\Filter\Components\FilterCheckbox');
+        Blade::component('filter-sorter', 'AmplifyCode\Filter\Components\FilterSorter');
        
-        Blade::component('filter-display', 'AscentCreative\Filter\Components\FilterDisplay');
-        Blade::component('filter-itemcontent', 'AscentCreative\Filter\Components\FilterItemContent');
-        Blade::component('filter-page', 'AscentCreative\Filter\Components\FilterPage');
-        Blade::component('filter-paginator', 'AscentCreative\Filter\Components\Paginator');
-        Blade::component('filter-pagesize', 'AscentCreative\Filter\Components\PageSize');
-        Blade::component('filter-counter', 'AscentCreative\Filter\Components\FilterCounter');
+        Blade::component('filter-display', 'AmplifyCode\Filter\Components\FilterDisplay');
+        Blade::component('filter-itemcontent', 'AmplifyCode\Filter\Components\FilterItemContent');
+        Blade::component('filter-page', 'AmplifyCode\Filter\Components\FilterPage');
+        Blade::component('filter-paginator', 'AmplifyCode\Filter\Components\Paginator');
+        Blade::component('filter-pagesize', 'AmplifyCode\Filter\Components\PageSize');
+        Blade::component('filter-counter', 'AmplifyCode\Filter\Components\FilterCounter');
         
-        Blade::component('filter-datatable', 'AscentCreative\Filter\Components\DataTable');
+        Blade::component('filter-datatable', 'AmplifyCode\Filter\Components\DataTable');
   }
 
 
@@ -108,7 +108,7 @@ class FilterServiceProvider extends ServiceProvider
                 // Route::post('/filter/' . $segment . '/loadpage', function() use ($fmCls) {
                 Route::post('/' . $segment, function() use ($fmCls) {
                     $fm = $fmCls::getInstance();
-                    $ctrl = new \AscentCreative\Filter\Controllers\FilterController();
+                    $ctrl = new \AmplifyCode\Filter\Controllers\FilterController();
                     return $ctrl->loadpage($fm);
                 })->name($nameprefix . 'filter.' . $segment . '.loadpage')
             );
@@ -151,7 +151,7 @@ class FilterServiceProvider extends ServiceProvider
                 $fm->addRoute('export', 
                     Route::get($segment . '/export', function() use ($fmCls, $exporter) { 
                         $fm = $fmCls::getInstance();
-                        $ctrl = new \AscentCreative\Filter\Controllers\FilterController();
+                        $ctrl = new \AmplifyCode\Filter\Controllers\FilterController();
                         return $ctrl->export($fm, $exporter);
                     })->name($nameprefix . 'filter.' . $segment . '.export')
                 );

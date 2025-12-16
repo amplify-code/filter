@@ -1,6 +1,6 @@
 <?php
 
-namespace AscentCreative\Filter\Components;
+namespace AmplifyCode\Filter\Components;
 
 use Illuminate\View\Component;
 

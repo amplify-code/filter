@@ -1,10 +1,10 @@
 <?php
 
-namespace AscentCreative\Filter\Components;
+namespace AmplifyCode\Filter\Components;
 
 use Illuminate\View\Component;
 
-use AscentCreative\Filter\DataTableBuilder;
+use AmplifyCode\Filter\DataTableBuilder;
 
 class DataTable extends Component
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace AscentCreative\Filter\Controllers;
+namespace AmplifyCode\Filter\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -9,7 +9,7 @@ use App\Http\Controllers\Controller;
 
 use \Illuminate\Support\Facades\Crypt;
 
-use AscentCreative\Filter\FilterManager;
+use AmplifyCode\Filter\FilterManager;
 
 class FilterController extends Controller {
 

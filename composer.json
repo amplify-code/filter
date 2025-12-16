@@ -1,26 +1,30 @@
 {
-  "name": "ascentcreative/filter",
-  "description": "Tools for filterable UI Lists / Grids",
-  "type": "library",
-  "authors": [
-    {
-      "name": "Ascent Creative",
-      "email": "info@ascent-creative.co.uk"
+    "name": "amplifycode/filter",
+    "description": "Tools for filterable UI Lists / Grids",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Ascent Creative",
+            "email": "info@ascent-creative.co.uk"
+        },
+        {
+            "name": "Amplify Code",
+            "email": "colin@amplifycode.com"
+        }
+    ],
+    "require": {
+        "doctrine/dbal": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "AmplifyCode\\Filter\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "AmplifyCode\\Filter\\FilterServiceProvider"
+            ]
+        }
     }
-  ],
-  "require": {
-    "doctrine/dbal": "^3.0"
-  },
-  "autoload": {
-    "psr-4": {
-      "AscentCreative\\Filter\\": "src"
-    }
-  },
-  "extra": {
-    "laravel": {
-        "providers": [
-            "AscentCreative\\Filter\\FilterServiceProvider"
-        ]
-    }
-}
 }

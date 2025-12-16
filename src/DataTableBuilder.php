@@ -1,7 +1,7 @@
 <?php
-namespace AscentCreative\Filter;
+namespace AmplifyCode\Filter;
 
-use AscentCreative\Filter\DataTable\Column;
+use AmplifyCode\Filter\DataTable\Column;
 use Illuminate\Support\Facades\Log;
 
 
