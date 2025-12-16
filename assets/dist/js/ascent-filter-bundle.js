@@ -545,9 +545,11 @@ var FilterView = {
           type: format
         });
       }
-      navigator.clipboard.write([new ClipboardItem(obj)]).then(function (value) {
-        // console.log(value);
-      });
+      if (navigator.clipboard) {
+        navigator.clipboard.write([new ClipboardItem(obj)]).then(function (value) {
+          // console.log(value);
+        });
+      }
       var toast = $(data.toast);
       if (toast) {
         $('body').append(toast);

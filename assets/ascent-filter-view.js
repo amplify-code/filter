@@ -349,12 +349,13 @@ var FilterView = {
                     obj[format] = new Blob([data.data[format]], { type: format });
                 }
 
-
-                navigator.clipboard.write([
-                    new ClipboardItem(obj),
-                  ]).then((value) => {
-                        // console.log(value);
-                  });
+                if (navigator.clipboard) {
+                    navigator.clipboard.write([
+                        new ClipboardItem(obj),
+                    ]).then((value) => {
+                            // console.log(value);
+                    });
+                }
 
                 let toast = $(data.toast);
                 if(toast) {
